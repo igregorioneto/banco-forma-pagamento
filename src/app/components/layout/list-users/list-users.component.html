@@ -1,0 +1,19 @@
+<div class="container-list-users">
+    <h3>Transaction</h3>
+    
+    <div class="list-users-payment">
+        <ul>
+            <li *ngFor="let item of transaction">
+                <img [src]="item.img" alt="foto">
+                <div class="info-user">                
+                    <span>{{item.name}}</span>
+                    <span>{{item.username}}</span>
+                </div>
+                <div class="payment">
+                    <button>Pay</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</div>

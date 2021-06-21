@@ -1,0 +1,40 @@
+@import './sass/mixins'
+.navbar
+    font-size: 1.5rem
+    margin: 30px 0px 0px 50px
+    color: #427bb1
+    font-weight: bold
+
+.navbar span
+    margin-right: 5px
+    font-size: 2.5rem
+    text-shadow: 2px 2px #70aad1
+
+.nav-search
+    display: inline
+
+@media (max-width: 1500px)
+    .nav-search input[type="search"]
+        margin-left: 60%
+        @include search()
+
+@media (max-width: 1200px)
+    .nav-search input[type="search"]
+        margin-left: 40%
+        @include search()
+
+@media (max-width: 800px)
+    .nav-search input[type="search"]
+        margin-left: 20%
+        @include search()
+
+@media (max-width: 576px)
+    .nav-search input[type="search"]
+        margin-left: 20%
+        @include search()
+
+@media (max-width: 550px)
+    .nav-search input[type="search"]
+        margin-top: 10px
+        display: block
+        @include search()

@@ -1,0 +1,48 @@
+@import '../../../assets/sass/mixins'
+
+h3 
+    margin-left: 25px
+    font-size: 25px
+    color: #464545
+    
+.dashboard
+    margin-top: 40px
+    display: flex        
+
+.box-cartao
+    @include border_tela()
+    @include box-cartao()
+
+    & img
+        width: 50px
+        margin-top: -20px
+        display: block
+        margin-left: 10px
+    & h4
+        display: inline-block
+        width: 40%
+        margin-left: 10px
+    & .company
+        display: inline-block
+        width: 40%
+        margin-right: 10px
+        text-align: right
+    & .number
+        display: inline
+        width: 90%
+        font-size: 25px
+        font-family: 'PT Mono'
+        margin-left: 10px
+
+    & .sub-number
+        display: block
+        font-size: 10px
+        margin-left: 10px
+    & .valid
+        display: block
+        font-size: 12px
+        margin-right: 10px
+        text-align: right
+    & .user
+        display: block
+        margin-left: 10px
