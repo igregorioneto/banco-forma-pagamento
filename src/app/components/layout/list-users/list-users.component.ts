@@ -26,28 +26,32 @@ export class ListUsersComponent implements OnInit {
   transactionUserWithCard() {
     this.userService.getUsers()
     .subscribe(u => {
-      u.map(user => {
-        this.cardService.getCards()
+      this.cardService.getCards()
         .subscribe(c => {
-          c.map(card => {
-            this.verifyTransaction(user, card)
-          })     
+          this.mapTrancationsUser(u,c)     
         })
+    })
+  }
+
+  mapTrancationsUser(user: User[], card: Card[]) {
+    user.map(user => {
+      card.map(card => {
+        this.verifyTransaction(user, card)
       })
     })
   }
 
   verifyTransaction(user: User, card: Card) {
-    if(user.id == card.user_id) {
-     const {name, username, img} = user
-      this.transaction
-        .push(
-          {
-            name, 
-            username, 
-            img
-          })
-    }
+      if(user.id == card.user_id) {
+      const {name, username, img} = user
+        this.transaction
+          .push(
+            {
+              name, 
+              username, 
+              img
+            })
+      } 
   }
 
 }
