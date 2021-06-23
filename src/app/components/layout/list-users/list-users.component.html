@@ -1,19 +1,32 @@
 <div class="container-list-users">
-    <h3>Transaction</h3>
+    <h3>Available users for transaction</h3>
     
     <div class="list-users-payment">
-        <ul>
-            <li *ngFor="let item of transaction">
-                <img [src]="item.img" alt="foto">
-                <div class="info-user">                
-                    <span>{{item.name}}</span>
-                    <span>{{item.username}}</span>
-                </div>
-                <div class="payment">
-                    <button>Pay</button>
-                </div>
-            </li>
-        </ul>
+        <div class="list-body">
+            <ul>
+                <li *ngFor="let item of transaction">
+                    <img [src]="item.img" alt="foto">
+                    <div class="info-user">                
+                        <span>{{item.name}}</span>
+                        <span>{{item.username}}</span>
+                    </div>
+                    <div class="payment">
+                        <button>Pay</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="card-body">
+            <ul>
+                <li *ngFor="let item of transactionPayment">
+                    <img [src]="item.img" alt="foto">
+                    <div class="info">
+                        <span class="info-name">{{item.name}}</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 
 </div>

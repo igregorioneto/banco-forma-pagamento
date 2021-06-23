@@ -249,9 +249,9 @@
         },
         {
             "id": 2,
-            "destination_user_id": 10002,
+            "destination_user_id": 1028,
             "value": 50.20,
-            "card_id": 1028
+            "card_id": 10002
         },
         {
             "id": 3,
